@@ -1,0 +1,16 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ParallelViewController_Example' do
+  
+  pod 'ParallelViewController', :path => '../'
+
+  
+  target 'ParallelViewController_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+  
+end

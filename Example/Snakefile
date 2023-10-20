@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+#[开发指南](https://yuque.antfin-inc.com/books/share/488da230-aa13-4d5d-9ff8-e7f5e8217edc)
+#[Snakefile&摩天轮](https://yuque.antfin-inc.com/docs/share/874b6dd3-7a93-447b-a469-802b142c8fc3)
+
+source 'podspec.alibaba-inc'
+source 'podspec.mirror.alibaba-inc'
+source 'git@gitlab.alibaba-inc.com:idlefish/specs.git'
+
+install! :ignore_framework_headers => true

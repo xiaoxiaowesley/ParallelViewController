@@ -22,7 +22,7 @@ pod 'ParallelViewController'
 
 ## Author
 
-xiaoxiang, xx266218@alibaba-inc.com
+xiaoxiang, xiaoxiaowesley@gmail.com
 
 ## License
 

@@ -53,10 +53,6 @@
 
     CollectionViewController * collectionVC  = [[CollectionViewController alloc]init];
     MainViewController * main = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
-    
-    
-//    UINavigationController * naviMain = [[UINavigationController alloc]initWithRootViewController:right];
-//
     collectionVC.tabBarItem.title = @"home";
     [tabVC addChildViewController:collectionVC];
 

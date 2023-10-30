@@ -1,13 +1,13 @@
 # ParallelViewController
 
-[切换中文](README_CN.md)
+[English README.md](README.md)
 
 [![CI Status](https://img.shields.io/travis/xiaoxiang/ParallelViewController.svg?style=flat)](https://travis-ci.org/xiaoxiang/ParallelViewController)
 [![Version](https://img.shields.io/cocoapods/v/ParallelViewController.svg?style=flat)](https://cocoapods.org/pods/ParallelViewController)
 [![License](https://img.shields.io/cocoapods/l/ParallelViewController.svg?style=flat)](https://cocoapods.org/pods/ParallelViewController)
 [![Platform](https://img.shields.io/cocoapods/p/ParallelViewController.svg?style=flat)](https://cocoapods.org/pods/ParallelViewController)
 
-A left-right split-screen iOS Implement for foldable Android devices.
+实现类似Android折叠屏设备左右分屏模式
 
 
 ## Installation
@@ -23,10 +23,10 @@ pod 'ParallelViewController'
 
 ## Example
 
-Similar to initializing a UINavigationController with a RootViewController, we need to pass in two ViewControllers for the left and right screens.
+类似UINavigationController初始化需要传入一个RootViewController类似，我们需要传入左右两个ViewController。
 
 
-Navigation Mode
+导航模式
 
 ```objetive-c
 
@@ -39,8 +39,7 @@ ParallelNavigationModeViewController * containerController = [[ParallelNavigatio
 ```
 
 
-Shopping mode:
-
+购物模式
 
 ```Objective-c
 DemoViewController * left = [[DemoViewController alloc]initWithNibName:@"DemoViewController" bundle:[NSBundle mainBundle]];
@@ -69,45 +68,46 @@ DemoViewController * newVC = [[DemoViewController alloc]initWithNibName:@"DemoVi
 
 
 
-## Shoping Mode
+## 双屏比价模式
+最新视图在最右屏，次新视图在最左屏。这种场景适合浏览多个商品宝贝进行比对。
 
-The newest view is displayed on the right screen while the second newest view is displayed on the left screen. This scenario is suitable for comparing multiple products.
-
-
-Taking push four ABCD pages for the example.
+以push四个ABCD界面为例子
 
 ![stack](img/stack.jpg)
 
-In portrait mode, it behaves like a regular UINavigationController, with the screens evenly distributed.
+竖屏时，和普通的UINavigationController一样。界面都是平铺到界面
 
 ![normal_mode](img/normal_mode.jpg)
 
-In landscape mode, the newest view is displayed on the right screen while the second newest view is displayed on the left screen.
+横屏时，最新视图在最右屏，次新视图在最左屏。
 
-
-Push
+Push界面
 
 ![normal_mode](img/shop_mode_push.jpg)
 
-Pop
+Pop界面
 
 ![normal_mode](img/shop_mode_pop.jpg)
 
 
-## Navigation Mode
 
-In portrait mode, it behaves like a regular UINavigationController.
+## 分屏导航模式
+
+竖屏时，和普通的UINavigationController一样。
+
+竖屏时，和普通的UINavigationController一样。界面都是平铺到界面
 
 ![normal_mode](img/normal_mode.jpg)
 
 
-In landscape mode, the left page remains fixed, while the newest and second newest views stack on the right side. This scenario is suitable for having a list page on the left and opening multiple products on the right side. The goal is to have the newest views all open on the right side.
+横屏时，左屏固定不变，最新、次新视图堆叠在右屏。这种场景适合左边是列表页，在右屏打开多个商品宝贝。其目的是让最新的界面在都在右边打开
 
-Push
+
+Push界面
 
 ![normal_mode](img/navigation_push.jpg)
 
-Pop
+Pop界面
 
 ![normal_mode](img/navigation_pop.jpg)
 

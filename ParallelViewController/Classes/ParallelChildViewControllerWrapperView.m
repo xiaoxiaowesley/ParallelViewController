@@ -7,7 +7,6 @@
 //
 
 #import "ParallelChildViewControllerWrapperView.h"
-#import <Masonry/Masonry.h>
 #import "ParallelShoppingModeViewController.h"
 #import "UIViewController+ParallelViewControllerItem.h"
 
@@ -84,13 +83,10 @@
             [self addSubview:_navigationBar];
         }
         // update the contraints
-        [_navigationBar mas_updateConstraints:^(MASConstraintMaker* make) {
-          make.top.equalTo(self.mas_top).with.offset(navigationBarTop);
-          make.left.equalTo(self.mas_left).with.offset(leftNavigationBarLeading);
-          make.height.mas_equalTo([NSNumber numberWithFloat:navigationBarHeight]);
-          make.width.equalTo(self.mas_width);
-        }];
-
+        [self.navigationBar.topAnchor constraintEqualToAnchor:self.topAnchor constant:navigationBarTop].active = YES;
+        [self.navigationBar.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:leftNavigationBarLeading].active = YES;
+        [self.navigationBar.heightAnchor constraintEqualToConstant:navigationBarHeight].active = YES;
+        [self.navigationBar.widthAnchor constraintEqualToAnchor:self.widthAnchor].active = YES;
     } else {
         if (_navigationBar.superview != nil) {
             [_navigationBar removeFromSuperview];

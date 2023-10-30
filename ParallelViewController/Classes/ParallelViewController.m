@@ -7,7 +7,6 @@
 //
 
 #import "ParallelViewController.h"
-#import <Masonry/Masonry.h>
 #import <objc/runtime.h>
 #import "UIViewController+ParallelViewControllerItem.h"
 

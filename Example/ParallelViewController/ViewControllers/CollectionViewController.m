@@ -6,7 +6,6 @@
 //  Create by wesleyxiao on 2021/11/12
 //  Copyright © 2021 xiaoxiang. All rights reserved.
 #import "CollectionViewController.h"
-#import <Masonry/Masonry.h>
 
 @interface EmojiCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *label;
@@ -26,7 +25,6 @@
         self.contentView.layer.cornerRadius = 20;
         self.contentView.layer.masksToBounds = YES;
         
-        
          _label = [[UILabel alloc]init];
         _label.textColor = [UIColor whiteColor];
         _label.font = [UIFont boldSystemFontOfSize:200];
@@ -34,12 +32,10 @@
         _label.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_label];
         
-        [_label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left);
-            make.height.equalTo(self.contentView.mas_height);
-            make.width.equalTo(self.contentView.mas_width);
-        }];
+        [self.label.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+        [self.label.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
+        [self.label.heightAnchor constraintEqualToAnchor:self.contentView.heightAnchor].active = YES;
+        [self.label.widthAnchor constraintEqualToAnchor:self.contentView.widthAnchor].active = YES;
     }
     return self;
 }
@@ -67,12 +63,10 @@
     _collectionView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:_collectionView];
     //update the contraints
-    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top);
-        make.left.equalTo(self.view.mas_left);
-        make.height.equalTo(self.view.mas_height);
-        make.width.equalTo(self.view.mas_width);
-    }];
+    [self.collectionView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [self.collectionView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    [self.collectionView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor].active = YES;
+    [self.collectionView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
     self.currentPage = 0;
 }
 

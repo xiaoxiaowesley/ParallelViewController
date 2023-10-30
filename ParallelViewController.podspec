@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/xiaoxiaowesley/ParallelViewController.git'
+  s.homepage         = 'https://xiaoxiaowesley.github.io/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xiaoxiang' => 'xiaoxiaowesley@gmail.com' }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		002045FB32EFAEFCA4A3449E /* Pods_ParallelViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E0B9315F6657992AD17132 /* Pods_ParallelViewController_Tests.framework */; };
-		1E0F2E37274E22A1002AB857 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F2E35274E22A1002AB857 /* CollectionViewController.m */; };
 		1E28A7A4273E50590028692B /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E28A7A2273E50590028692B /* DemoViewController.m */; };
 		1E28A7A5273E50590028692B /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E28A7A3273E50590028692B /* DemoViewController.xib */; };
 		1E28A7A9273E50810028692B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E28A7A7273E50810028692B /* MainViewController.m */; };
@@ -42,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E0F2E35274E22A1002AB857 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
-		1E0F2E36274E22A1002AB857 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		1E28A7A1273E50590028692B /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		1E28A7A2273E50590028692B /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		1E28A7A3273E50590028692B /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
@@ -111,8 +108,6 @@
 		1E28A753273E44D40028692B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E0F2E36274E22A1002AB857 /* CollectionViewController.h */,
-				1E0F2E35274E22A1002AB857 /* CollectionViewController.m */,
 				1E28A7A1273E50590028692B /* DemoViewController.h */,
 				1E28A7A2273E50590028692B /* DemoViewController.m */,
 				1E28A7A3273E50590028692B /* DemoViewController.xib */,
@@ -402,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E0F2E37274E22A1002AB857 /* CollectionViewController.m in Sources */,
 				1E8BB3FF28574D4B00A92A99 /* MyModalViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -536,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhijian zhang (72PDQ76AFM)";
+				CODE_SIGN_IDENTITY = "Apple Development: 博 刘 (6LKZUDC677)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 43Y657P48S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -561,7 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhijian zhang (72PDQ76AFM)";
+				CODE_SIGN_IDENTITY = "Apple Development: 博 刘 (6LKZUDC677)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RB8339DLXU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

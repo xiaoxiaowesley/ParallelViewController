@@ -79,15 +79,22 @@
                                               target:self
                                             selector:@selector(onClickBackAction:)];
             _navigationBar.items = @[ navigItem ];
-            ;
             [self addSubview:_navigationBar];
+            
+            // if _navigationBar 's constraints not nil, remove it
+            if (_navigationBar.constraints.count > 0) {
+                [_navigationBar removeConstraints:_navigationBar.constraints];
+            }
+            // update the contraints
+            //添加约束 self.navigationBar的上边距等于self的上边距，左边距等于self的左边距，高度等于navigationBarHeight，宽度等于self的宽度
+            _navigationBar.translatesAutoresizingMaskIntoConstraints = NO;
+            [self.navigationBar.topAnchor constraintEqualToAnchor:self.topAnchor constant:navigationBarTop].active = YES;
+            [self.navigationBar.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:leftNavigationBarLeading].active = YES;
+            [self.navigationBar.heightAnchor constraintEqualToConstant:navigationBarHeight].active = YES;
+            [self.navigationBar.widthAnchor constraintEqualToAnchor:self.widthAnchor].active = YES;
         }
-        // update the contraints
-        [self.navigationBar.topAnchor constraintEqualToAnchor:self.topAnchor constant:navigationBarTop].active = YES;
-        [self.navigationBar.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:leftNavigationBarLeading].active = YES;
-        [self.navigationBar.heightAnchor constraintEqualToConstant:navigationBarHeight].active = YES;
-        [self.navigationBar.widthAnchor constraintEqualToAnchor:self.widthAnchor].active = YES;
-    } else {
+
+     } else {
         if (_navigationBar.superview != nil) {
             [_navigationBar removeFromSuperview];
         }

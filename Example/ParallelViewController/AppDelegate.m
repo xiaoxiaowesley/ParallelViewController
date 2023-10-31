@@ -11,7 +11,6 @@
 @import ParallelViewController;
 #import "DemoViewController.h"
 #import "MainViewController.h"
-#import "ViewControllers/CollectionViewController.h"
 @interface TabBarViewController : UITabBarController
 @end
 @implementation TabBarViewController
@@ -45,20 +44,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DemoViewController * left = [[DemoViewController alloc]initWithNibName:@"DemoViewController" bundle:[NSBundle mainBundle]];
     DemoViewController * right = [[DemoViewController alloc]initWithNibName:@"DemoViewController" bundle:[NSBundle mainBundle]];
-    TabBarViewController * tabVC = [[TabBarViewController alloc]init];
 
-    ParallelNavigationModeViewController * containerController = [[ParallelNavigationModeViewController alloc]initWithLeftViewController:tabVC rightViewController:right];
+    ParallelNavigationModeViewController * containerController = [[ParallelNavigationModeViewController alloc]initWithLeftViewController:left rightViewController:right];
 //    ParallelShoppingModeViewController * containerController = [[ParallelShoppingModeViewController alloc]initWithLeftViewController:tabVC rightViewController:right];
 
-    CollectionViewController * collectionVC  = [[CollectionViewController alloc]init];
-    MainViewController * main = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
-    collectionVC.tabBarItem.title = @"home";
-    [tabVC addChildViewController:collectionVC];
-
-    main.tabBarItem.title = @"native";
-    [tabVC addChildViewController:main];
-    
     _window = [[UIWindow alloc]init];
     _window.rootViewController = containerController;
     [_window makeKeyAndVisible];
